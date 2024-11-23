@@ -1,0 +1,146 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  overflow: hidden; 
+}
+
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://plus.unsplash.com/premium_photo-1675237624816-a4755b4649fe?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -2;
+}
+
+
+.rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.rain .drop {
+  position: absolute;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-image: url('https://media.fortniteapi.io/images/74c8a2c40b9f42c28b5c41dc1f954607/transparent.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fall infinite linear;
+  animation-duration: 8s; 
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px); 
+  }
+  80% {
+    transform: translateY(calc(100vh - 80px)); 
+  }
+  85% {
+    transform: translateY(calc(100vh - 120px)); 
+  }
+  100% {
+    transform: translateY(110vh); 
+  }
+}
+
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.animated-title {
+  font-size: 4em;
+  text-shadow: 0 0 20px #fff, 0 0 40px rgb(255, 153, 0);
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { text-shadow: 0 0 20px #fff, 0 0 40px #00f; }
+  100% { text-shadow: 0 0 40px #f00, 0 0 60px #0ff; }
+}
+
+.philosophical-text {
+  font-size: 1.5em;
+  color: #3a3131;
+  text-shadow: 0 0 5px #ffee00;
+  margin-top: 100px;
+}
+
+
+.interactive-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  flex: 10; 
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Icono en la parte superior derecha */
+.top-right-icon {
+  position: absolute;
+  top: 20px; /* Distancia desde el borde superior */
+  right: 20px; /* Distancia desde el borde derecho */
+  z-index: 2; /* Asegura que esté por encima de otros elementos */
+}
+
+.top-right-icon .icon {
+  width: 70px; /* Tamaño del ícono */
+  height: 70px;
+}
+
+.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 105px; 
+  width: 100%;
+  padding: 0 20px;
+}
+
+.icon-item p {
+  color: #ffffff; /* Cambia el color a verde */
+  font-size: 18px;
+  text-shadow: 2px 2px 5px rgba(32, 13, 13, 0.63); /* Efecto de sombra */
+  font-weight: bold;
+  text-align: center;
+}
+
+.icon {
+  width: 70px; 
+  height: 70px;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #f5a623;
+  text-align: center;
+  padding: 20px;
+  height: 80px; 
+  box-sizing: border-box;
+  z-index: 1; 
+  flex-shrink: 0; 
+}
