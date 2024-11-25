@@ -79,18 +79,20 @@ body {
   justify-content: center;
   text-align: center;
   padding: 20px;
+  color: #28585a;
 }
 
 .icon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
-  width: 100%;
+  width: 90%;
 }
 
 .icon-item p {
   font-size: 1.2rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 5px rgb(204, 65, 174);
+  color: #ffffff;
 }
 
 .icon {
